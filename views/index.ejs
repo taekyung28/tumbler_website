@@ -1,0 +1,19 @@
+<h1>HOME</h1>
+
+<a href="/index">home</a>
+<a href="/statistics">statistics</a>
+<% if (user) { %>
+  <a href="/auth/logout">logout</a>
+<% } else { %>
+<a href="/auth/login">login</a>
+<a href="/auth/signup">signup</a>
+<% } %>
+%>
+
+<p><%= hello %></p>
+<p><%= result.cnt  %></p>
+
+
+<form action="/index" method="post">
+    <input type="image" src="images/plant.png" alt="Submit" width="48" height="48" style="cursor:pointer;">
+</form>

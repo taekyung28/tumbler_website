@@ -1,0 +1,37 @@
+<h1>SIGN UP</h1>
+
+<div style="color:red">
+  <ul>
+    <% for (let i=0; i<errors.length;i++){ %>
+    <li><%=  errors[i].msg %></li>
+    <% } %>
+  </ul>
+</div>
+
+<%= errors.sqlMessage %>
+
+<form class="" action="/auth/signup" method="post">
+  <p>
+    <input type="text" name="username" placeholder="username" value="">
+  </p>
+  <p>
+    <input type="email" name="email" placeholder="email" value="">
+  </p>
+  <p>
+    <input type="radio" name="gender" value="F" checked> Female
+    <input type="radio" name="gender" value="M"> Male
+  </p>
+  <p>
+    <input type="number" name="birthyear" placeholder="birthyear" min="1900" max="2099" step="1" value="" />
+
+  </p>
+  <p>
+    <input type="password" name="password" placeholder="password" value="">
+  </p>
+  <p>
+    <input type="password" name="passwordMatch" placeholder="password" value="">
+  </p>
+  <p>
+    <input type="submit">
+  </p>
+</form>
