@@ -24,7 +24,7 @@ body{
 
 
 #header{padding: 10px; width: 100%; color:#fff; background: rgba(52, 27, 43, 0.5); opacity: 0.8; position:fixed; z-index: 99; }
-#logo img{width: 50px; height:50px}
+#logo img{width: 48px; height:48px}
 #nav{float: right; }
 #nav li{float: left; margin-right: 20px; font-size:18px; line-height:50px;}
 #nav li a{color: #ffffff;}
@@ -43,7 +43,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(../images/green2.jpg); 
+    background-image: url(../images/green2.jpg);
 	background-size: 100% 100%;
     width: 100%;
     height: 100%;
@@ -55,7 +55,7 @@ body{
 		display: inline-block;
 		padding: 4em;
 		text-align: center;
-		margin: 150px 0 0 0;		
+		margin: 150px 0 0 0;
 	}
 		#section1 .inner header {
 			display: inline-block;
@@ -91,11 +91,11 @@ body{
 
 
 #section2{
-	padding: 100px 0; 
+	padding: 100px 0;
 	width:80%;
 	margin: 0 auto;
-	text-align: center; 
-	overflow: hidden; 
+	text-align: center;
+	overflow: hidden;
 }
 #section2 .box{
 	display: inline-block;
@@ -104,7 +104,7 @@ body{
 	box-sizing: border-box;
 	text-align: center;
 	border: outset 1px;
-	
+
 }
 
 #section2 .box .upbox{
@@ -122,7 +122,7 @@ body{
 	color: #fff;
     border-radius: 4px;
 	font-size: 1.2em;
-	
+
 }
 
 #section2 .box .downbox{
@@ -139,7 +139,7 @@ body{
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;    
+    padding: 5px 0;
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
@@ -155,9 +155,9 @@ body{
 
 #section4{
 	padding: 100px 0;
-	margin: 0 auto; 
-	width: 80%; 
-	overflow: hidden;  
+	margin: 0 auto;
+	width: 80%;
+	overflow: hidden;
 	border: solid 2px;
 }
 #section4>div{float:left; }
@@ -182,5 +182,3 @@ body{
 #footer .footer_in{width: 100%; margin: 0 auto; text-align: center; border: 1px solid blue; }
 #footer .footer_in li{display:inline-block; margin:20px;}
 #footer .footer_in p{clear:both;}
-
-

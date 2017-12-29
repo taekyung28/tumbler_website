@@ -2,6 +2,21 @@ var express = require('express');
 var router = express.Router();
 var conn = require('../config/db')();
 
+var allinfo = function (req, res, next) {
+  var sql = 'SELECT count(*) as cnt FROM use_count';
+  conn.query(sql, function(err, results){
+    req.allTumbCnt = results[0];
+  });
+  var sql2 = 'SELECT count(*) as cnt FROM users';
+  conn.query(sql2, function(err, results){
+    req.allUserCnt = results[0];
+  });
+  next();
+};
+
+router.use(allinfo);
+
+
 
 router.get('/', function(req, res) {
     if(req.user && req.user.id){
@@ -11,7 +26,9 @@ router.get('/', function(req, res) {
           res.render('index.ejs',{
             hello : `hello ${req.user.username}`,
             result : results[0],
-            user : req.user
+            user : req.user,
+            alluser: req.allUserCnt,
+            alltumb: req.allTumbCnt
           });
           console.log(results)
         });
@@ -22,7 +39,9 @@ router.get('/', function(req, res) {
         res.render('index.ejs',{
           hello : 'WELCOME stranger',
           result : results[0],
-          user : req.user
+          user : req.user,
+          alluser: req.allUserCnt,
+          alltumb: req.allTumbCnt
         });
         console.log(results);
       });
