@@ -1,19 +1,152 @@
-<h1>HOME</h1>
-
-<a href="/index">home</a>
-<a href="/statistics">statistics</a>
-<% if (user) { %>
-  <a href="/auth/logout">logout</a>
-<% } else { %>
-<a href="/auth/login">login</a>
-<a href="/auth/signup">signup</a>
-<% } %>
-%>
-
-<p><%= hello %></p>
 <p><%= result.cnt  %></p>
-
-
 <form action="/index" method="post">
     <input type="image" src="images/plant.png" alt="Submit" width="48" height="48" style="cursor:pointer;">
 </form>
+<p><%= hello %></p>
+
+<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title>MAIN</title>
+
+	<link rel="stylesheet" href="/stylesheets/style.css" />
+
+</head>
+<body>
+
+<div id="wrapper">
+
+	<!-- Header -->
+	<header id="header" class="alt">
+		<a href="/index" title="Return to the homepage" id="logo">
+		<img src="images/plant.png" alt="Nike logo" />
+		</a>
+		<nav id="nav">
+			<ul>
+				<li class="current"><a href="#">About</a></li>
+				<li class="current"><a href="/statistics">Statistics</a></li>
+        <% if (user) { %>
+        <li><a href="/auth/logout" class="button logout">logout</a></li>
+        <% } else { %>
+        <li><a href="/auth/login" class="button special">Login</a></li>
+        <li><a href="/auth/signup" class="button special">Sign Up</a></li>
+        <% } %>
+        %>
+			</ul>
+		</nav>
+	</header><!-- Header -->
+
+
+
+	<!-- section1 -->
+	<section id="section1">
+		<div class="inner">
+			<header>
+				<h2>TUMBLER</h2>
+			</header>
+			<p>YOU
+			<br />
+			CAN
+			<br />
+			SAVE THE WORLD.</p>
+			<footer>
+				<ul class="buttons vertical">
+					<li><a href="#main" class="button fit scrolly">Tell Me More</a></li>
+				</ul>
+			</footer>
+		</div>
+	</section><!-- section1 -->
+
+
+
+
+
+		<section id="p">
+		</section>
+
+
+	<!-- section2 -->
+		<section id="section2">
+			<p>I USE TUMBLER 에서는 현재 <strong>50</strong>명의 회원이<br />
+			   <strong>3333</strong>번 텀블러를 사용하고 있습니다.
+			</p>
+
+			<div class="box">
+				<div class="upbox">
+					<img src="images/tree_black.png" alt="">
+					<p><span>&nbsp;&nbsp;tree&nbsp;&nbsp;</span></p>
+				</div>
+				<p class="downbox">15.5 tree</p>
+				<span class="tooltiptext">1 tumbler = 0.004tree</span>
+			</div>
+			<div class="box">
+				<div class="upbox">
+					<img src="images/water_black.png" alt="">
+					<p><span>&nbsp;&nbsp;water&nbsp;&nbsp;</span></p>
+				</div>
+				<p class="downbox">387.9L</p>
+				<span class="tooltiptext">1 tumbler = 0.1L</span>
+			</div>
+			<div class="box">
+				<div class="upbox">
+					<img src="images/co2_black.png" alt="">
+					<p><span>&nbsp;&nbsp;gas&nbsp;&nbsp;</span></p>
+				</div>
+				<p class="downbox">387.9kg</p>
+				<span class="tooltiptext">1 tumbler = 0.1KG</span>
+			</div>
+			<div class="box">
+				<div class="upbox">
+					<img src="images/trash_black.png" alt="">
+					<p><span>&nbsp;&nbsp;trash&nbsp;&nbsp;</span></p>
+				</div>
+				<p class="downbox">129.3kg</p>
+				<span class="tooltiptext">1 tumbler = 0.03kg</span>
+			</div>
+		</section><!-- section2 -->
+
+
+		<!-- section4 -->
+		<div id="section4">
+			<div class="img">
+				<img src="images/garbages.jpg" alt="" />
+			</div>
+			<div class="text">
+				<ul>
+					<li>■ FACT1</li>
+					<li>■ FACT2</li>
+					<li>■ FACT3</li>
+				</ul>
+				<a href="" class="moreinfo"><div>MOREINFO</div></a>
+			</div>
+		</div><!-- section4 -->
+
+
+		<!-- section3 -->
+		<section id="section3">
+			<span>are yor ready to eco?
+				<a href="" >Join us</a>
+			</span>
+		</section><!-- section3 -->
+
+
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="footer_in">
+			<ul>
+				<li>share us</li>
+				<li>follow us</li>
+				<li>tag us</li>
+				<li>contact us</li>
+			</ul>
+			<p>&copy Copyright 2017. All Rights Reserved</p>
+		</div>
+	</div><!-- footer -->
+
+
+</div><!-- wrapper -->
+
+</body>
+</html>
