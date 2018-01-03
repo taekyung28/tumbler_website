@@ -21,10 +21,10 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   store: new MySQLStore({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'gksxorud',
-    database : 'test'
+    host     : 'us-cdbr-iron-east-05.cleardb.net',
+    user     : 'b3bf751ec2fd4a',
+    password : '7e26ecb2',
+    database : 'heroku_56bd3a78820e59a'
   })
 }));
 
@@ -43,6 +43,7 @@ app.get('*', function(req, res){
 });
 
 
-app.listen(3000, function() {
-  console.log('APP START on 3000');
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+
 });

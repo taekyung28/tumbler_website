@@ -3,7 +3,7 @@ module.exports = function(passport){
   var router = express.Router();
   var bkfd2Password = require("pbkdf2-password");
   var hasher = bkfd2Password();
-  var conn = require('../config/db')();
+  var conn = require('../config/db');
 
 
   // /auth/login

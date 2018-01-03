@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var conn = require('../config/db')();
+var conn = require('../config/db');
 
 var chartinfo = function (req, res, next) {
   var sql = 'SELECT count(*) as usercount, DATE_FORMAT(usertime,"%Y-%m-%d") as usertime FROM use_count group by DATE_FORMAT(usertime,"%Y-%m-%d") order by usertime limit 10';
