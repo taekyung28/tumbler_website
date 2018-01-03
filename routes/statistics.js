@@ -14,6 +14,13 @@ var chartinfo = function (req, res, next) {
     req.usercount = usercount;
     req.usertime = usertime;
   });
+
+  var sql2 = 'select gender, count(*) cnt from use_count group by gender';
+  conn.query(sql2, function(err, results){
+    var gender=[results[0].cnt,results[1].cnt];
+    req.gender= gender;
+  });
+
   next();
 };
 
@@ -30,7 +37,8 @@ router.get('/', function(req, res) {
           result : results,
           user : req.user,
           labels: req.usertime,
-          data: req.usercount
+          data: req.usercount,
+          gender: req.gender
         });
         console.log(results)
       });
@@ -43,7 +51,8 @@ router.get('/', function(req, res) {
           result : results,
           user : req.user,
           labels: req.usertime,
-          data: req.usercount
+          data: req.usercount,
+          gender: req.gender
         });
         console.log(results)
 
