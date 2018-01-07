@@ -1,5 +1,5 @@
 module.exports = function(app){
-  var conn = require('./db');
+  var conn = require('./db')();
   var bkfd2Password = require("pbkdf2-password");
   var hasher = bkfd2Password();
   var passport = require('passport');

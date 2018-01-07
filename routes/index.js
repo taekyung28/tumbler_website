@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var conn = require('../config/db');
+var conn = require('../config/db')();
 
 var allinfo = function (req, res, next) {
   var sql = 'SELECT count(*) as cnt FROM use_count';
